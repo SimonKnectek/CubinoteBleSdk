@@ -1,0 +1,11 @@
+framework module CubinoteBLESDK {
+  umbrella header "CubinoteBLESDK.h"
+
+  export *
+  module * { export * }
+}
+
+module CubinoteBLESDK.Swift {
+    header "CubinoteBLESDK-Swift.h"
+    requires objc
+}

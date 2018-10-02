@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9977DE8A2149860E00486E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977DE892149860E00486E72 /* AppDelegate.swift */; };
+		9977DE8C2149860E00486E72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977DE8B2149860E00486E72 /* ViewController.swift */; };
+		9977DE8F2149860E00486E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9977DE8D2149860E00486E72 /* Main.storyboard */; };
+		9977DE912149861000486E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9977DE902149861000486E72 /* Assets.xcassets */; };
+		9977DE942149861000486E72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9977DE922149861000486E72 /* LaunchScreen.storyboard */; };
+		9977DEAE2152CCFE00486E72 /* after.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 9977DEAD2152CCFE00486E72 /* after.bmp */; };
+		99CCD60A21629FD700595D19 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9977DEA2214FF35600486E72 /* ExternalAccessory.framework */; };
+		C551630E07D7259B8F6B56EF /* Pods_CubinoteBleDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F1AB36458A6767B9E2739D /* Pods_CubinoteBleDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99CCD66E2163BBEC00595D19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01F1AB36458A6767B9E2739D /* Pods_CubinoteBleDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CubinoteBleDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		612FA4ADF06800C2A72FAB94 /* Pods-CubinoteBleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubinoteBleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubinoteBleDemo/Pods-CubinoteBleDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9977DE862149860E00486E72 /* CubinoteBleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubinoteBleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9977DE892149860E00486E72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9977DE8B2149860E00486E72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9977DE8E2149860E00486E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9977DE902149861000486E72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9977DE932149861000486E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9977DE952149861000486E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9977DEA2214FF35600486E72 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		9977DEA42150053200486E72 /* CubinoteBleDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CubinoteBleDemo.entitlements; sourceTree = "<group>"; };
+		9977DEAD2152CCFE00486E72 /* after.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = after.bmp; path = Assets.xcassets/after.bmp; sourceTree = "<group>"; };
+		E676034FEBAE5B99E23AD5A3 /* Pods-CubinoteBleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubinoteBleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubinoteBleDemo/Pods-CubinoteBleDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9977DE832149860E00486E72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99CCD60A21629FD700595D19 /* ExternalAccessory.framework in Frameworks */,
+				C551630E07D7259B8F6B56EF /* Pods_CubinoteBleDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9977DE7D2149860E00486E72 = {
+			isa = PBXGroup;
+			children = (
+				9977DE882149860E00486E72 /* CubinoteBleDemo */,
+				9977DE872149860E00486E72 /* Products */,
+				9977DE9B2149965300486E72 /* Frameworks */,
+				B32598C9E60E52D24B84884D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		9977DE872149860E00486E72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9977DE862149860E00486E72 /* CubinoteBleDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9977DE882149860E00486E72 /* CubinoteBleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9977DEA42150053200486E72 /* CubinoteBleDemo.entitlements */,
+				9977DE892149860E00486E72 /* AppDelegate.swift */,
+				9977DE8B2149860E00486E72 /* ViewController.swift */,
+				9977DE8D2149860E00486E72 /* Main.storyboard */,
+				9977DE902149861000486E72 /* Assets.xcassets */,
+				9977DEAD2152CCFE00486E72 /* after.bmp */,
+				9977DE922149861000486E72 /* LaunchScreen.storyboard */,
+				9977DE952149861000486E72 /* Info.plist */,
+			);
+			path = CubinoteBleDemo;
+			sourceTree = "<group>";
+		};
+		9977DE9B2149965300486E72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9977DEA2214FF35600486E72 /* ExternalAccessory.framework */,
+				01F1AB36458A6767B9E2739D /* Pods_CubinoteBleDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B32598C9E60E52D24B84884D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E676034FEBAE5B99E23AD5A3 /* Pods-CubinoteBleDemo.debug.xcconfig */,
+				612FA4ADF06800C2A72FAB94 /* Pods-CubinoteBleDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9977DE852149860E00486E72 /* CubinoteBleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9977DE982149861000486E72 /* Build configuration list for PBXNativeTarget "CubinoteBleDemo" */;
+			buildPhases = (
+				BFFC799FC4DB558155863A36 /* [CP] Check Pods Manifest.lock */,
+				9977DE822149860E00486E72 /* Sources */,
+				9977DE832149860E00486E72 /* Frameworks */,
+				9977DE842149860E00486E72 /* Resources */,
+				99CCD66E2163BBEC00595D19 /* Embed Frameworks */,
+				DF8F082A5F70E41E22C9A809 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CubinoteBleDemo;
+			productName = CubinoteBleDemo;
+			productReference = 9977DE862149860E00486E72 /* CubinoteBleDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9977DE7E2149860E00486E72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Simon Wei";
+				TargetAttributes = {
+					9977DE852149860E00486E72 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 9977DE812149860E00486E72 /* Build configuration list for PBXProject "CubinoteBleDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9977DE7D2149860E00486E72;
+			productRefGroup = 9977DE872149860E00486E72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9977DE852149860E00486E72 /* CubinoteBleDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9977DE842149860E00486E72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9977DEAE2152CCFE00486E72 /* after.bmp in Resources */,
+				9977DE942149861000486E72 /* LaunchScreen.storyboard in Resources */,
+				9977DE912149861000486E72 /* Assets.xcassets in Resources */,
+				9977DE8F2149860E00486E72 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BFFC799FC4DB558155863A36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CubinoteBleDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF8F082A5F70E41E22C9A809 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CubinoteBleDemo/Pods-CubinoteBleDemo-frameworks.sh",
+				"${PODS_ROOT}/CubinoteBLESDK/CubinoteBLESDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CubinoteBLESDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CubinoteBleDemo/Pods-CubinoteBleDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9977DE822149860E00486E72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9977DE8C2149860E00486E72 /* ViewController.swift in Sources */,
+				9977DE8A2149860E00486E72 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9977DE8D2149860E00486E72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9977DE8E2149860E00486E72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9977DE922149861000486E72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9977DE932149861000486E72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9977DE962149861000486E72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9977DE972149861000486E72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9977DE992149861000486E72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E676034FEBAE5B99E23AD5A3 /* Pods-CubinoteBleDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CubinoteBleDemo/CubinoteBleDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4L24CP25DK;
+				INFOPLIST_FILE = CubinoteBleDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubinote.CubinoteBleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9977DE9A2149861000486E72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 612FA4ADF06800C2A72FAB94 /* Pods-CubinoteBleDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CubinoteBleDemo/CubinoteBleDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4L24CP25DK;
+				INFOPLIST_FILE = CubinoteBleDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubinote.CubinoteBleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9977DE812149860E00486E72 /* Build configuration list for PBXProject "CubinoteBleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9977DE962149861000486E72 /* Debug */,
+				9977DE972149861000486E72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9977DE982149861000486E72 /* Build configuration list for PBXNativeTarget "CubinoteBleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9977DE992149861000486E72 /* Debug */,
+				9977DE9A2149861000486E72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9977DE7E2149860E00486E72 /* Project object */;
+}

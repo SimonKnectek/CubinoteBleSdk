@@ -1,0 +1,16 @@
+PODS:
+  - CubinoteBLESDK (1.0.0)
+
+DEPENDENCIES:
+  - CubinoteBLESDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CubinoteBLESDK
+
+SPEC CHECKSUMS:
+  CubinoteBLESDK: b34db39b1154d334a5baba0446a431a054c3095a
+
+PODFILE CHECKSUM: 02699edf23cb4cbe5e832c6436551c5f6bab9efe
+
+COCOAPODS: 1.5.3
