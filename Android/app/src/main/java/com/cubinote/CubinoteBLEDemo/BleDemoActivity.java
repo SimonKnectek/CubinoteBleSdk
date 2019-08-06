@@ -117,27 +117,19 @@ public class BleDemoActivity extends AppCompatActivity {
                 InnerContent inerContent = new InnerContent(t1);
 
                 //Create a regular text and insert it into print content
-                String text = "Test\n\n";//"测试";
-                try{
-                    //TextItem t2 = new TextItem(Base64.encodeToString(text.getBytes(), Base64.NO_WRAP), 1);
-                    TextItem t2 = new TextItem(text, 1);
-                    inerContent.textList.add(t2);
-                }
-                catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
-
+                String text = "Test Cubinote SDK";
+                TextItem t2 = new TextItem(text, 1);
+                inerContent.textList.add(t2);
 
                 //Create a big font, bold and underline text and insert it into print content
-                /*TextItem t3 = new TextItem(text, 1);
+                TextItem t3 = new TextItem(text, 1);
                 t3.underline = 130;
                 t3.bold = 1;
                 t3.fontSize = 2;
                 inerContent.textList.add(t3);
 
                 //Create a QR code and insert it into print content
-                String qr = "Test QR Code by Simon";
+                String qr = "Test QR Code";
                 TextItem t4 = new TextItem(qr, 3);
                 inerContent.textList.add(t4);
 
@@ -171,7 +163,7 @@ public class BleDemoActivity extends AppCompatActivity {
                     inerContent.textList.add(p9);
                     TextItem p10 = new TextItem(base64String, 5);
                     inerContent.textList.add(p10);*/
-                /*}
+                }
                 catch (IOException e){
                     ;
                 }
@@ -182,7 +174,7 @@ public class BleDemoActivity extends AppCompatActivity {
 
                 //Create a Cubinote Logo and insert it into print content
                 TextItem t7 = new TextItem(57);
-                inerContent.textList.add(t7);*/
+                inerContent.textList.add(t7);
 
                 resultText.setText(SDK.CubinoteBLE_Print_Content(items.get(spinner.getSelectedItemPosition()), inerContent));
             }

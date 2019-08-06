@@ -1,2 +1,2 @@
-include ':app', ':CubinoteBleSdk', ':cubinoteblesdk', ':cubinoteblesdk-debug', ':gson'
+include ':app', ':CubinoteBleSdk', ':gson'
 project(':gson').projectDir = new File('gson-master/gson')
