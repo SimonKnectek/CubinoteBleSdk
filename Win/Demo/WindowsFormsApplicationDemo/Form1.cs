@@ -45,7 +45,7 @@ namespace WindowsFormsApplicationDemo
                         {
                             CubinoteBLE SDK = new CubinoteBLE();
                             String result = SDK.CubinoteBLE_GetStatus(portName);
-                            if (result.StartsWith("1880"))
+                            if (result.StartsWith("1880") || result.StartsWith("{"))
                             {
                                 //Connected with Cubintoe
                                 allPorts.Add(portName);
