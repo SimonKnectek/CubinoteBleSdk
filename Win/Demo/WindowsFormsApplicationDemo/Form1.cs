@@ -45,7 +45,7 @@ namespace WindowsFormsApplicationDemo
                         {
                             CubinoteBLE SDK = new CubinoteBLE();
                             String result = SDK.CubinoteBLE_GetStatus(portName);
-                            if (result.StartsWith("1880") || result.StartsWith("{"))
+                            if (result.StartsWith("1880")|| result.StartsWith("{"))
                             {
                                 //Connected with Cubintoe
                                 allPorts.Add(portName);
@@ -164,6 +164,24 @@ namespace WindowsFormsApplicationDemo
             textBox1.Text = res;
         }
 
-        
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Create CubinoteBLE
+            CubinoteBLE SDK = new CubinoteBLE();
+            //Set options of Cubinote
+            String res = SDK.CubinoteBLE_SetTimeOut(Decimal.ToInt32(numericUpDown1.Value));
+            textBox1.Clear();
+            textBox1.Text = res;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Create CubinoteBLE
+            CubinoteBLE SDK = new CubinoteBLE();
+            //Set options of Cubinote
+            String res = SDK.CubinoteBLE_GetTimeOut();
+            textBox1.Clear();
+            textBox1.Text = res;
+        }
     }
 }

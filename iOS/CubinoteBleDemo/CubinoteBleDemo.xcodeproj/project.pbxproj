@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99777DA8237DAD9F0022F17C /* ViewControllerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99777DA7237DAD9F0022F17C /* ViewControllerDevice.swift */; };
 		9977DE8A2149860E00486E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977DE892149860E00486E72 /* AppDelegate.swift */; };
 		9977DE8C2149860E00486E72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977DE8B2149860E00486E72 /* ViewController.swift */; };
 		9977DE8F2149860E00486E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9977DE8D2149860E00486E72 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		01F1AB36458A6767B9E2739D /* Pods_CubinoteBleDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CubinoteBleDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		612FA4ADF06800C2A72FAB94 /* Pods-CubinoteBleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubinoteBleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubinoteBleDemo/Pods-CubinoteBleDemo.release.xcconfig"; sourceTree = "<group>"; };
+		99777DA7237DAD9F0022F17C /* ViewControllerDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDevice.swift; sourceTree = "<group>"; };
 		9977DE862149860E00486E72 /* CubinoteBleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubinoteBleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9977DE892149860E00486E72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9977DE8B2149860E00486E72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		9977DE882149860E00486E72 /* CubinoteBleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				99777DA7237DAD9F0022F17C /* ViewControllerDevice.swift */,
 				9977DEA42150053200486E72 /* CubinoteBleDemo.entitlements */,
 				9977DE892149860E00486E72 /* AppDelegate.swift */,
 				9977DE8B2149860E00486E72 /* ViewController.swift */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99777DA8237DAD9F0022F17C /* ViewControllerDevice.swift in Sources */,
 				9977DE8C2149860E00486E72 /* ViewController.swift in Sources */,
 				9977DE8A2149860E00486E72 /* AppDelegate.swift in Sources */,
 			);

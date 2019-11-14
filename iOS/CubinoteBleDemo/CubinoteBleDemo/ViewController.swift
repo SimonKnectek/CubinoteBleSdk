@@ -7,25 +7,29 @@
 //
 
 import UIKit
-import ExternalAccessory
 import CubinoteBLESDK
+import ExternalAccessory
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class ViewController: UIViewController, UITextFieldDelegate{
     
-    @IBOutlet weak var PVDevices: UIPickerView!
     @IBOutlet weak var tvResult: UITextView!
-    @IBOutlet weak var pvDevices: UIPickerView!
-    @IBOutlet weak var pvLed: UIPickerView!
-    @IBOutlet weak var pvBuz: UIPickerView!
-    @IBOutlet weak var pvSpeed: UIPickerView!
-    @IBOutlet weak var pvLanguageId: UIPickerView!
     @IBOutlet weak var tvReadResult: UITextView!
+    @IBOutlet weak var btnselectdevice: UIButton!
+    @IBOutlet weak var btnled: UIButton!
+    @IBOutlet weak var btnbuz: UIButton!
+    @IBOutlet weak var btnspeed: UIButton!
+    @IBOutlet weak var btnlanguageid: UIButton!
+    @IBOutlet weak var tvTimeOut: UITextField!
     
     var connectedCubinotes: [EAAccessory] = [EAAccessory]()
     var pickerDevicesData: [String] = [String]()
     var pickerData: [String] = [String]()
     var pickerData1: [String] = [String]()
     var index:Int = 0
+    var led:Int = 1
+    var buz:Int = 1
+    var speed:Int = 1
+    var languageid:Int = 1
     
     let sdk = CubinoteBLESDK.CubinoteBLE()
     
@@ -35,34 +39,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerData = ["0", "1"]
         pickerData1 = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9","10", "11", "12", "13", "14", "15", "16", "17", "18", "19","20", "21"]
         
-        pvDevices.dataSource = self
-        pvDevices.delegate = self
-        
-        pvLed.dataSource = self
-        pvLed.delegate = self
-        pvLed.selectRow(1, inComponent: 0, animated: false)
-        
-        pvBuz.dataSource = self
-        pvBuz.delegate = self
-        pvBuz.selectRow(1, inComponent: 0, animated: false)
-        
-        pvSpeed.dataSource = self
-        pvSpeed.delegate = self
-        pvSpeed.selectRow(1, inComponent: 0, animated: false)
-        
-        pvLanguageId.dataSource = self
-        pvLanguageId.delegate = self
-        pvLanguageId.selectRow(1, inComponent: 0, animated: false)
-        
         connectedCubinotes = EAAccessoryManager.shared().connectedAccessories
         print(connectedCubinotes)
         for acc in connectedCubinotes {
             pickerDevicesData.append(acc.name)
         }
         if pickerDevicesData.count>0{
-            pvDevices.reloadAllComponents()
+            btnselectdevice.setTitle(pickerDevicesData[index], for: UIControl.State.normal)
         }
         
+        tvTimeOut.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,44 +56,100 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1;
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag==2 {
-            return pickerDevicesData.count
-        }
-        else if pickerView.tag==1 {
-            return pickerData1.count
-        }
-        else{
-            return pickerData.count
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag==2 {
-            return pickerDevicesData[row]
-        }
-        else if pickerView.tag==1 {
-            return pickerData1[row]
-        }
-        else{
-            return pickerData[row]
-        }
-    }
-    
     func readCallback(result:String)->Void{
         tvReadResult.text = result
+    }
+    
+    
+    @IBAction func ClickSelectDevice(_ sender: Any) {
+        if pickerDevicesData.count>0{
+            let viewControllerStoryboardId = "selectdeviceview"
+            let storyboardName = "Main"
+            let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+            
+            let vc:ViewControllerDevice = storyboard.instantiateViewController(withIdentifier: viewControllerStoryboardId) as! ViewControllerDevice
+            
+            vc.pickerData = pickerDevicesData
+            vc.defaltrow = index
+            vc.title = "Select Device"
+            vc.tag = 0
+            vc.mainViewController = self
+            self.navigationController!.pushViewController(vc, animated: false)
+        }
+        else{
+            
+        }
+    }
+    
+    @IBAction func ClickLed(_ sender: Any) {
+        let viewControllerStoryboardId = "selectdeviceview"
+        let storyboardName = "Main"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+        
+        let vc:ViewControllerDevice = storyboard.instantiateViewController(withIdentifier: viewControllerStoryboardId) as! ViewControllerDevice
+        
+        vc.pickerData = pickerData
+        vc.defaltrow = led
+        vc.title = "Set LED"
+        vc.tag = 1
+        vc.mainViewController = self
+        self.navigationController!.pushViewController(vc, animated: false)
+    }
+    @IBAction func ClickBuz(_ sender: Any) {
+        let viewControllerStoryboardId = "selectdeviceview"
+        let storyboardName = "Main"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+        
+        let vc:ViewControllerDevice = storyboard.instantiateViewController(withIdentifier: viewControllerStoryboardId) as! ViewControllerDevice
+        
+        vc.pickerData = pickerData
+        vc.defaltrow = buz
+        vc.title = "Set Buz"
+        vc.tag = 2
+        vc.mainViewController = self
+        self.navigationController!.pushViewController(vc, animated: false)
+    }
+    
+    
+    @IBAction func ClickSpeed(_ sender: Any) {
+        let viewControllerStoryboardId = "selectdeviceview"
+        let storyboardName = "Main"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+        
+        let vc:ViewControllerDevice = storyboard.instantiateViewController(withIdentifier: viewControllerStoryboardId) as! ViewControllerDevice
+        
+        vc.pickerData = pickerData
+        vc.defaltrow = speed
+        vc.title = "Set Speed"
+        vc.tag = 3
+        vc.mainViewController = self
+        self.navigationController!.pushViewController(vc, animated: false)
+    }
+    
+    @IBAction func ClickLanguageId(_ sender: Any) {
+        let viewControllerStoryboardId = "selectdeviceview"
+        let storyboardName = "Main"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+        
+        let vc:ViewControllerDevice = storyboard.instantiateViewController(withIdentifier: viewControllerStoryboardId) as! ViewControllerDevice
+        
+        vc.pickerData = pickerData1
+        vc.defaltrow = languageid
+        vc.title = "Set Language"
+        vc.tag = 4
+        vc.mainViewController = self
+        self.navigationController!.pushViewController(vc, animated: false)
+    }
+    
+    
+    func windowRootViewController() -> UIViewController {
+        return (UIApplication.shared.delegate?.window??.rootViewController)!
     }
     
     @IBAction func ClickOpen(_ sender: Any) {
         if connectedCubinotes.count<=0{
             return
         }
-        index = pvDevices.selectedRow(inComponent: 0)
-        
         tvResult.text = String(sdk.CubinoteBLE_OpenSession(device: connectedCubinotes[index], callback:readCallback))
     }
     
@@ -120,13 +162,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func ClickSet(_ sender: Any) {
-        let led = Int(pickerData[pvLed.selectedRow(inComponent: 0)])
-        let buz = Int(pickerData[pvBuz.selectedRow(inComponent: 0)])
-        let speed = Int(pickerData1[pvSpeed.selectedRow(inComponent: 0)])
-        let languageid = Int(pickerData[pvLanguageId.selectedRow(inComponent: 0)])
-        
-        tvResult.text = String(sdk.CubinoteBLE_Set(led: led!, buz: buz!, speed: speed!, languageId: languageid!))
+        tvResult.text = String(sdk.CubinoteBLE_Set(led: led, buz: buz, speed: speed, languageId: languageid))
     }
+    @IBAction func ClickGetTimeout(_ sender: Any) {
+        tvResult.text = String(sdk.CubinoteBLE_GetTimeOut())
+    }
+    @IBAction func ClickSetTimeout(_ sender: Any) {
+        let tt = tvTimeOut.text!
+        let timeo:Int = Int(tt) ?? 60000
+        tvResult.text = String(sdk.CubinoteBLE_SetTimeOut(timeout: timeo))
+    }
+    
     @IBAction func ClickPrintBWImage(_ sender: Any) {
         let filePath = Bundle.main.url(forResource: "after", withExtension: "bmp")
         let data = NSData(contentsOf: filePath!)
@@ -174,6 +220,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         innerContent.textList.append(t7)
         
         tvResult.text = String(sdk.CubinoteBLE_Print_Content(innerContent: innerContent))
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 

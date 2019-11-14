@@ -33,7 +33,7 @@ public class BleDemoActivity extends AppCompatActivity {
     Set<BluetoothDevice> pairedDevices;
     ArrayList<BluetoothDevice> items = new ArrayList<>();
     ArrayList<String> itemnames = new ArrayList<>();
-    EditText resultText;
+    EditText resultText, timeoutText;
 
     CubinoteBLE SDK = new CubinoteBLE();
 
@@ -69,6 +69,8 @@ public class BleDemoActivity extends AppCompatActivity {
         spinner5.setAdapter(adapter);
         spinner5.setSelection(1);
 
+        timeoutText = (EditText) findViewById(R.id.editText2);
+
         resultText = (EditText) findViewById(R.id.editText1);
 
         Button btnGetStatus = (Button) findViewById(R.id.button1);
@@ -88,6 +90,31 @@ public class BleDemoActivity extends AppCompatActivity {
                 int speed = Integer.parseInt(spinner4.getSelectedItem().toString());
                 int languageId = Integer.parseInt(spinner5.getSelectedItem().toString());
                 resultText.setText(SDK.CubinoteBLE_Set(items.get(spinner.getSelectedItemPosition()), led, buz, speed, languageId));
+            }
+        });
+
+        Button btnGetTimeOut = (Button) findViewById(R.id.button5);
+        btnGetTimeOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultText.setText(SDK.CubinoteBLE_GetTimeOut());
+            }
+        });
+
+        Button btnSetTimeOut = (Button) findViewById(R.id.button6);
+        btnSetTimeOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int timeout = Integer.parseInt(timeoutText.getText().toString());
+                if(timeout<100) {
+                    Toast.makeText(v.getContext(), "Minimum timeout is 100ms",Toast.LENGTH_LONG);
+                    return;
+                }
+                if(timeout>Integer.MAX_VALUE) {
+                    Toast.makeText(v.getContext(), "Timeout is too long",Toast.LENGTH_LONG);
+                    return;
+                }
+                resultText.setText(SDK.CubinoteBLE_SetTimeOut(timeout));
             }
         });
 
@@ -163,7 +190,7 @@ public class BleDemoActivity extends AppCompatActivity {
                     inerContent.textList.add(p9);
                     TextItem p10 = new TextItem(base64String, 5);
                     inerContent.textList.add(p10);*/
-                }
+               }
                 catch (IOException e){
                     ;
                 }
@@ -181,17 +208,6 @@ public class BleDemoActivity extends AppCompatActivity {
         });
 
         initBlutooth();
-    }
-
-    public static String base64EncodeBuffer(byte[] base64Data) {
-        try {
-            String base64Result = base64Data == null ? null : Base64.encodeToString(base64Data, Base64.NO_WRAP);
-            return base64Result;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return null;
-        }
-
     }
 
     private void initBlutooth(){

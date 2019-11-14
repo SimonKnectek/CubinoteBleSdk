@@ -44,7 +44,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -67,9 +72,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 253);
+            this.groupBox1.Location = new System.Drawing.Point(3, 344);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 203);
+            this.groupBox1.Size = new System.Drawing.Size(391, 112);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Result:";
@@ -80,7 +85,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(379, 175);
+            this.textBox1.Size = new System.Drawing.Size(379, 90);
             this.textBox1.TabIndex = 0;
             // 
             // button1
@@ -209,7 +214,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(16, 154);
+            this.button3.Location = new System.Drawing.Point(22, 272);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(210, 23);
             this.button3.TabIndex = 17;
@@ -219,7 +224,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(16, 196);
+            this.button4.Location = new System.Drawing.Point(22, 314);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(210, 23);
             this.button4.TabIndex = 25;
@@ -227,11 +232,66 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(22, 228);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(210, 23);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "CubinoteBLE_SetTimeOut";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 192);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "timeout(ms):";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(94, 190);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 29;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(16, 151);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(210, 23);
+            this.button6.TabIndex = 30;
+            this.button6.Text = "CubinoteBLE_GetTimeOut";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 453);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox5);
@@ -253,6 +313,7 @@
             this.Text = "CubinoteBLE Demo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,6 +337,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button6;
     }
 }
 
